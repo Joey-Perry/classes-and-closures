@@ -173,9 +173,11 @@ class Machine {
   }
 
   reboot(){
+    let myMachine = this;
+
     return function(){
-      this.wear_and_tear_count -= 10;
-      this.needs_reboot = false;
+      myMachine.wear_and_tear_count -= 10;
+      myMachine.needs_reboot = false; 
     }
   }
 }
